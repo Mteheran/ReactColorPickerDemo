@@ -7,6 +7,31 @@ function ColorContainer({color}) {
   return <div className={className}></div>
 }
 
+const COLORS = ['blue', 'green', 'red', 'yellow'];
+
+function ColorDropdown({ color, onChange }) {
+  return (
+    <div className="color-dropdown-container">
+      <select
+        className="color-dropdown"
+        value={color}
+        onChange={(e) => onChange(e.target.value)}
+      >
+        <option value="black" disabled>Select a color</option>
+        {COLORS.map((c) => (
+          <option key={c} value={c}>
+            {c.charAt(0).toUpperCase() + c.slice(1)}
+          </option>
+        ))}
+      </select>
+      <div
+        className="color-dropdown-preview"
+        style={{ backgroundColor: color }}
+      ></div>
+    </div>
+  );
+}
+
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +43,10 @@ class ColorPicker extends Component {
   render() {
     return(
       <div className="color-picker">
+        <ColorDropdown
+          color={this.state.color}
+          onChange={(color) => this.setState({ color })}
+        />
         <div className="button-container">
           <button className="color-blue"   onClick={() => this.setState({ color: 'blue'})}></button>
           <button className="color-green"  onClick={() => this.setState({ color: 'green'})}></button>
