@@ -7,7 +7,7 @@ function ColorContainer({color}) {
   return <div className={className}></div>
 }
 
-const COLORS = ['blue', 'green', 'red', 'yellow'];
+const COLORS = ['blue', 'green', 'red', 'yellow', 'violet'];
 
 function ColorDropdown({ color, onChange }) {
   return (
@@ -51,7 +51,8 @@ class ColorPicker extends Component {
           <button className="color-blue"   onClick={() => this.setState({ color: 'blue'})}></button>
           <button className="color-green"  onClick={() => this.setState({ color: 'green'})}></button>
           <button className="color-red"    onClick={() => this.setState({ color: 'red'})}></button>
-          <button className="color-yellow" onClick={() => this.setState({ color: 'yellow'})}></button>          
+          <button className="color-yellow" onClick={() => this.setState({ color: 'yellow'})}></button>
+          <button className="color-violet" onClick={() => this.setState({ color: 'violet'})}></button>
         </div>
         <ColorContainer color={this.state.color}/>
       </div>

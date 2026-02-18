@@ -62,26 +62,31 @@ button{
   background-color: black;
 }
 
+.color-violet {
+  background-color: violet;
+}
+
 .color-dropdown-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 15px auto;
+  width: 509px;
 }
 
 .color-dropdown {
   padding: 10px 15px;
-  font-size: 16px;
+  font-size: 18px;
   border: 2px solid #333;
   border-radius: 4px;
   cursor: pointer;
-  min-width: 160px;
+  flex: 1;
 }
 
 .color-dropdown-preview {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 2px solid #333;
   border-radius: 4px;
 }
