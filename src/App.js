@@ -22,7 +22,8 @@ class ColorPicker extends Component {
           <button className="color-blue"   onClick={() => this.setState({ color: 'blue'})}></button>
           <button className="color-green"  onClick={() => this.setState({ color: 'green'})}></button>
           <button className="color-red"    onClick={() => this.setState({ color: 'red'})}></button>
-          <button className="color-yellow" onClick={() => this.setState({ color: 'yellow'})}></button>          
+          <button className="color-yellow" onClick={() => this.setState({ color: 'yellow'})}></button>
+          <button className="color-brown"  onClick={() => this.setState({ color: 'brown'})}></button>
         </div>
         <ColorContainer color={this.state.color}/>
       </div>
